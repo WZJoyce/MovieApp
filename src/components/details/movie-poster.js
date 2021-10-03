@@ -1,16 +1,17 @@
-import { Fragment } from "react"
-import styled from 'styled-components'
+import { Fragment } from "react";
+import styled from 'styled-components';
 
-export const MoviePoster = (movie) =>{
-    console.log(movie.Poster)
+export const MoviePoster = (props) =>{
+    const poster = props.movie.Poster;
 
     return(
         <Fragment>
-            <Poster src={movie.movie.Poster}></Poster>
+            <Poster src={poster}></Poster>
         </Fragment>
     )
     
 
 }
 
-const Poster = styled.img``;
+const Poster = styled.img`
+max-width:100%`;

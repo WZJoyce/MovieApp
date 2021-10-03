@@ -1,28 +1,28 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
-import { Fragment } from "react"
-import { MovieHeader } from "./movie-header"
-import { MoviePlot } from "./movie-plot"
-import { MovieRatings } from "./movie-ratings"
+import { useContext } from "react";
+import { Fragment } from "react";
+import { MovieHeader } from "./movie-header";
+import { MoviePlot } from "./movie-plot";
+import { MovieRatings } from "./movie-ratings";
+import { Divider } from "@mui/material";
+import { MovieContext } from "../context/MovieContext";
 
 export const MovieDetails = () =>{
-    const [movie, setMovie] = useState(null)
-    const apiKey = "463e582d"
-     useEffect(() => {
-        axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=tt3896198`).then(
-            res => setMovie(res.data)
-        )
-    },[]) 
-    if(movie == null){
+    const context = useContext(MovieContext);
+    const movie = context.movie;
+
+     if(movie == null)
         return null
-    }
-    else{
+    else
         return (
             <Fragment>
                 <MovieHeader movie={movie} />
+                <Divider flexItem style={{marginTop:"20px", marginBottom:"20px" }}/>
                 <MoviePlot movie={movie} />
+                <Divider flexItem style={{marginTop:"20px", marginBottom:"20px" }}/>
                 <MovieRatings movie={movie} />
             </Fragment>
         )
-    }
+     
+    
 }
+
