@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { MovieContext } from './movie-context';
 import { useEffect, useState } from 'react';
-import { config } from '../../config'
+import { config } from '../../config';
 
 export const MovieContextProvider = ({ children }) => {
   const [movie, setMovie] = useState(null);
