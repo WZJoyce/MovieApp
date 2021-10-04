@@ -1,8 +1,12 @@
 # MovieApp
-##Getting started
-###Clone the repository
+
+## Getting started
+
+### Clone the repository
 https://github.com/WZJoyce/MovieApp.git
-###Install dependencies
+
+### Install dependencies
 npm install
-###Run the project
+
+### Run the project
 npm start
