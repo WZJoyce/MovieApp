@@ -12,3 +12,5 @@ npm install
 npm start
 
 ##Screenshots
+![Search movies](https://github.com/WZJoyce/MovieApp/blob/main/images/search.png)
+![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/checklist.png)
