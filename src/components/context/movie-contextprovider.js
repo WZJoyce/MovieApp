@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from "axios";
+import axios from 'axios';
 import { MovieContext } from './movie-context';
 import { useEffect, useState } from 'react';
 import { config } from '../../config'
