@@ -21,7 +21,5 @@ export const MovieDetails = () =>{
                 <MovieRatings movie={movie} />
             </Fragment>
         )
-     
-    
 }
 

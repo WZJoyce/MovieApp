@@ -9,9 +9,8 @@ export const MoviePoster = (props) =>{
             <Poster src={poster}></Poster>
         </Fragment>
     )
-    
-
 }
 
 const Poster = styled.img`
-max-width:100%`;
+    max-width:100%
+`;

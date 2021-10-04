@@ -48,7 +48,7 @@ export const MovieHeader = (props) => {
 
 const Title = styled.h1`
     font-size: 3.0em;
-    `;
+`;
 
 const Subtitle = styled.span`
 `;
@@ -61,7 +61,8 @@ const Rated = styled.button`
 
 const Year = styled.span`
     margin-left: 20px;
-    margin-right: 5px`;
+    margin-right: 5px
+`;
 
 const Genre = styled.span`
     margin-left: 5px;
@@ -74,4 +75,5 @@ const Runtime = styled.span`
 `;
 
 const Actors = styled.div`
-    margin-top:20px`;
+    margin-top:20px
+`;

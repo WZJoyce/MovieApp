@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -9,7 +9,7 @@ import { MovieContext} from '../context';
 
 export const MovieType= () => {
   const { setSearchType } = useContext(MovieContext);
-  const [value, setValue] = React.useState('any');
+  const [value, setValue] = useState('any');
   
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -47,7 +47,6 @@ export const MovieType= () => {
         }}/>} label="Episodes" disableTypography={true}/> 
       </RadioGroup>
     </FormControl>
-
   );
 }
 

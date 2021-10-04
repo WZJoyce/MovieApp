@@ -12,4 +12,5 @@ export const MoviePlot = (props) =>{
 }
 
 const Plot = styled.div`
-text-align:left`;
+    text-align:left
+`;

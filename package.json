@@ -9,9 +9,6 @@
     "@material-ui/icons": "^5.0.0-beta.5",
     "@material-ui/utils": "^4.11.2",
     "@mui/material": "^5.0.2",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.4",
     "localStorage": "^1.0.4",
     "lodash": "^4.17.21",
@@ -45,5 +42,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10"
   }
 }
