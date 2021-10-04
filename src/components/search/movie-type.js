@@ -13,7 +13,7 @@ export const MovieType= () => {
   
   const handleChange = (event) => {
     setValue(event.target.value);
-    setSearchType(event.target.value);
+    event.target.value === 'any' ? setSearchType(''): setSearchType(event.target.value);
   };
 
   return (

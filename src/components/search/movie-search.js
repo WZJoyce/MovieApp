@@ -17,7 +17,6 @@ import { MovieType } from './movie-type';
 import { MovieContext } from '../context/MovieContext';
 import debounce from 'lodash.debounce';
 
-
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -75,10 +74,6 @@ export const MovieSearch = () => {
   const handleMenuClose = () => {
     setAnchorEl(null);
     handleMobileMenuClose();
-  };
-
-  const handleMobileMenuOpen = (event) => {
-    setMobileMoreAnchorEl(event.currentTarget);
   };
 
   const onSearchTextChange = (event) => {

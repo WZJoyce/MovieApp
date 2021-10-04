@@ -4,7 +4,6 @@ import ListSubheader from '@mui/material/ListSubheader';
 import { useContext } from "react"
 import { MovieItem } from './movie-item';
 import { MovieContext } from "../context/MovieContext";
-import { Divider } from "@mui/material";
 import { ListItemButton } from '@mui/material';
 
 export const MovieList = () =>{
