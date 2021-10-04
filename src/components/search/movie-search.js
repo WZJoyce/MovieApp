@@ -1,4 +1,4 @@
-import React, { useContext, useCallback } from 'react';
+import React, { useContext, useMemo} from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -7,7 +7,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { MovieYear } from './movie-year';
 import { MovieType } from './movie-type';
-import { MovieContext } from '../context/movie-context';
+import { MovieContext } from '../context';
 import debounce from 'lodash.debounce';
 
 const Search = styled('div')(({ theme }) => ({
@@ -36,7 +36,6 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
   justifyContent: 'center',
 }));
 
-
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
@@ -57,7 +56,7 @@ export const MovieSearch = () => {
     setSearchName(event.target.value);
   }
 
-  const debouncedSearchTextChange = useCallback(
+  const debouncedSearchTextChange = useMemo(
     () => debounce(onSearchTextChange, 500)
     , []);
 

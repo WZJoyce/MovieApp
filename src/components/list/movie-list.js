@@ -1,20 +1,30 @@
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListSubheader from '@mui/material/ListSubheader';
-import { useContext, useCallback } from "react"
+import { useContext, useCallback } from 'react';
 import { MovieItem } from './movie-item';
-import { MovieContext } from "../context/movie-context";
+import { MovieContext } from '../context';
 import { ListItemButton } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
+import Alert from '@mui/material/Alert';
 
 export const MovieList = () =>{
-  const { searchResult, searchYear }  = useContext(MovieContext);
-  const movies = searchResult?.Search || [];
-  const filteredMovies = movies.filter( m => m.Year <= searchYear[1] && m.Year >= searchYear[0]);
+  const { searchResult, searchYear, loadingList, error, setClickLoadBtn, clickLoadBtn }  = useContext(MovieContext);
+  const movies = searchResult.search;
+  const filteredMovies = movies.filter( m => m.Year.substring(0,4) <= searchYear[1] && m.Year.substring(0,4) >= searchYear[0]);
   const { currentMovieId,setCurrentMovieId } = useContext(MovieContext);
   
   const onMovieItemSelected = useCallback((imdbId) => {
     setCurrentMovieId(imdbId)
   }, []);
+
+  if(loadingList){
+    return <CircularProgress />
+  }
+
+  if(error){
+    return <Alert severity="error">{error}</Alert>
+  }
 
   return (
     <List
@@ -28,13 +38,19 @@ export const MovieList = () =>{
       }}
       subheader={<li />}
     > 
-            <ListSubheader sx={{textAlign: 'left'}}>{searchResult?.totalResults || 0} RESULTS</ListSubheader>
+            <ListSubheader sx={{textAlign: 'left'}}>{searchResult?.total || 0} RESULTS</ListSubheader>
             {filteredMovies.map((movie) => (
               <ListItemButton key={movie.imdbID}  selected={currentMovieId === movie.imdbID} divider={true} 
               onClick={() => onMovieItemSelected(movie.imdbID)}>
                 <MovieItem movie={movie}></MovieItem>
               </ListItemButton>        
             ))}
+         
+          {
+            (searchResult?.total || 0) !== 0 ? <ListItemButton onClick={() => setClickLoadBtn(!clickLoadBtn)}>Load More</ListItemButton> : null
+          }
+             
+          
          
     </List>
   );

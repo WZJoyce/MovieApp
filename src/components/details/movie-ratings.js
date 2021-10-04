@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Divider, Grid } from "@mui/material";
+import { Divider, Grid } from '@mui/material';
 
 export const MovieRatings = (props) =>{
     const movie = props.movie;

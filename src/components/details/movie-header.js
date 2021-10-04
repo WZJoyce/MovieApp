@@ -1,10 +1,9 @@
-import { Fragment } from "react";
-import { MoviePoster } from "./movie-poster";
+import React, {Fragment} from 'react';
+import { MoviePoster } from './movie-poster';
 import styled from 'styled-components';
-import React from 'react';
-import { Grid } from "@mui/material";
+import { Grid } from '@mui/material';
 import Box from '@mui/material/Box';
-import { MovieWatchlist} from "./movie-watchlist";
+import { MovieWatchlist } from './movie-watchlist';
 
 export const MovieHeader = (props) => {
     const movie = props.movie;

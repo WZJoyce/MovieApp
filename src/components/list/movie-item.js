@@ -11,9 +11,9 @@ const Img = styled('img')({
   });
 
 export const MovieItem = (props) =>{
-  const { movie} = props;
+  const { movie } = props;
 
-    return(
+  return(
         <div>
               <Grid container spacing={2}>
                 <Grid item>

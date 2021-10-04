@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 import { Fragment } from "react";
 import styled from 'styled-components';
-import { MovieContext} from '../context/movie-context';
+import { MovieContext} from '../context';
 
 function valuetext(value) {
   return `${value}`;
@@ -29,14 +29,14 @@ export const MovieYear= () => {
         onChange={handleChange}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
-        max = {2015}
+        max = {2021}
         min = {1970}
         sx={{color:'grey.400', 
         '&.css-1yo1jo6-MuiStack-root':{
           marginTop: '10px',
         },
       }}/>
-      <span>2015</span>
+      <span>2021</span>
       </Stack>
     </Box>
     </Fragment>
