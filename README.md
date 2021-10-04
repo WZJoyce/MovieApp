@@ -19,3 +19,9 @@ npm start
 
 ### Add a movie to checklist
 ![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/checklist.png)
+
+### Load more movies
+![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/loadmore.png)
+
+### Error
+![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/error.png)
