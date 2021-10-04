@@ -16,7 +16,7 @@ export const MovieList = () => {
 
   const onMovieItemSelected = useCallback((imdbId) => {
     setCurrentMovieId(imdbId)
-  }, []);
+  });
 
   if (loadingList) {
     return <CircularProgress />

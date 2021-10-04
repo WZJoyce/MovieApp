@@ -58,7 +58,7 @@ export const MovieSearch = () => {
 
   const debouncedSearchTextChange = useMemo(
     () => debounce(onSearchTextChange, 500)
-    , []);
+  );
 
   return (
     <Box sx={{ flexGrow: 1 }}>
