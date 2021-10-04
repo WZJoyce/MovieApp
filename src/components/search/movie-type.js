@@ -5,7 +5,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import styled from 'styled-components';
 import { grey } from '@mui/material/colors';
-import { MovieContext} from '../context/MovieContext';
+import { MovieContext} from '../context/movie-context';
 
 export const MovieType= () => {
   const { setSearchType } = useContext(MovieContext);

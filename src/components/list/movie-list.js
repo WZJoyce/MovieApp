@@ -1,9 +1,9 @@
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListSubheader from '@mui/material/ListSubheader';
-import { useContext } from "react"
+import { useContext, useCallback } from "react"
 import { MovieItem } from './movie-item';
-import { MovieContext } from "../context/MovieContext";
+import { MovieContext } from "../context/movie-context";
 import { ListItemButton } from '@mui/material';
 
 export const MovieList = () =>{
@@ -12,9 +12,9 @@ export const MovieList = () =>{
   const filteredMovies = movies.filter( m => m.Year <= searchYear[1] && m.Year >= searchYear[0]);
   const { currentMovieId,setCurrentMovieId } = useContext(MovieContext);
   
-  const onMovieItemSelected = (imdbId) => {
+  const onMovieItemSelected = useCallback((imdbId) => {
     setCurrentMovieId(imdbId)
-  };
+  }, []);
 
   return (
     <List

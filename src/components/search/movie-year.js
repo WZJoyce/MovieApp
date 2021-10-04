@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider';
 import Stack from '@mui/material/Stack';
 import { Fragment } from "react";
 import styled from 'styled-components';
-import { MovieContext} from '../context/MovieContext';
+import { MovieContext} from '../context/movie-context';
 
 function valuetext(value) {
   return `${value}`;

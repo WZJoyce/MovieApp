@@ -2,7 +2,7 @@ import { Fragment, useContext } from "react";
 import {Button} from "@mui/material";
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import localStorage from "localStorage";
-import { MovieContext } from "../context/MovieContext"
+import { MovieContext } from "../context/movie-context"
 
 export const MovieWatchlist = (props) =>{
     const { watchBtn, setWatchBtn }  = useContext(MovieContext);
