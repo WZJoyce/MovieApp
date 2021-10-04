@@ -17,11 +17,11 @@ npm start
 ### Search movies
 ![Search movies](https://github.com/WZJoyce/MovieApp/blob/main/images/search.png)
 
-### Add a movie to checklist
-![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/checklist.png)
+### Add a movie to Watchlist
+![Add a movie to Watchlist](https://github.com/WZJoyce/MovieApp/blob/main/images/watchlist.png)
 
 ### Load more movies
-![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/loadmore.png)
+![Load more movies](https://github.com/WZJoyce/MovieApp/blob/main/images/loadmore.png)
 
 ### Error
-![Add a movie to checklist](https://github.com/WZJoyce/MovieApp/blob/main/images/error.png)
+![Error](https://github.com/WZJoyce/MovieApp/blob/main/images/error.png)
