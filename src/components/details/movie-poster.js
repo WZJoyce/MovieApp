@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import styled from 'styled-components';
 
-export const MoviePoster = (props) =>{
+export const MoviePoster = (props) => {
     const poster = props.movie.Poster;
 
-    return(
+    return (
         <Fragment>
             <Poster src={poster}></Poster>
         </Fragment>

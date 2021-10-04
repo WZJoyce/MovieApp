@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { MoviePoster } from './movie-poster';
 import styled from 'styled-components';
 import { Grid } from '@mui/material';
@@ -14,33 +14,33 @@ export const MovieHeader = (props) => {
                 <Grid item xs={4}>
                     <MoviePoster movie={movie}></MoviePoster>
                 </Grid>
-                <Grid item xs={8}  textAlign="left" sx={{ alignSelf: 'flex-end' }}>  
-                    <MovieWatchlist movie = {movie}></MovieWatchlist>
-                    <Title>{movie.Title}</Title> 
+                <Grid item xs={8} textAlign="left" sx={{ alignSelf: 'flex-end' }}>
+                    <MovieWatchlist movie={movie}></MovieWatchlist>
+                    <Title>{movie.Title}</Title>
                     <Subtitle>
-                    <Box
-                        sx={{
-                        display: 'flex',
-                        flexDirection: 'row',
-                        bgcolor: 'background.paper',
-                        justifyContent: 'flex-start',
-                        }}
-                    >
-                        <Box><Rated disabled>{movie.Rated}</Rated></Box>
-                        <Box><Year>{movie.Year}</Year>
-                        <span>&#183;</span>
-                        </Box>
-                        <Box>
-                        <Genre>{movie.Genre}</Genre>
-                        <span>&#183;</span>
-                        </Box>
-                        <Box >
-                        <Runtime>{movie.Runtime}</Runtime>
-                        </Box>
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                flexDirection: 'row',
+                                bgcolor: 'background.paper',
+                                justifyContent: 'flex-start',
+                            }}
+                        >
+                            <Box><Rated disabled>{movie.Rated}</Rated></Box>
+                            <Box><Year>{movie.Year}</Year>
+                                <span>&#183;</span>
+                            </Box>
+                            <Box>
+                                <Genre>{movie.Genre}</Genre>
+                                <span>&#183;</span>
+                            </Box>
+                            <Box >
+                                <Runtime>{movie.Runtime}</Runtime>
+                            </Box>
                         </Box>
                     </Subtitle>
-                    <Actors>{movie.Actors}</Actors>  
-                </Grid>  
+                    <Actors>{movie.Actors}</Actors>
+                </Grid>
             </Grid>
         </Fragment>
     )

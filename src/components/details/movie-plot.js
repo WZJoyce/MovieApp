@@ -1,10 +1,10 @@
 import { Fragment } from 'react';
 import styled from 'styled-components';
 
-export const MoviePlot = (props) =>{
+export const MoviePlot = (props) => {
     const plot = props.movie.Plot;
 
-    return(
+    return (
         <Fragment>
             <Plot>{plot}</Plot>
         </Fragment>

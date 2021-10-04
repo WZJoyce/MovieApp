@@ -1,19 +1,19 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import styled from 'styled-components';
 import { grey } from '@mui/material/colors';
-import { MovieContext} from '../context';
+import { MovieContext } from '../context';
 
-export const MovieType= () => {
+export const MovieType = () => {
   const { setSearchType } = useContext(MovieContext);
   const [value, setValue] = useState('any');
-  
+
   const handleChange = (event) => {
     setValue(event.target.value);
-    event.target.value === 'any' ? setSearchType(''): setSearchType(event.target.value);
+    event.target.value === 'any' ? setSearchType('') : setSearchType(event.target.value);
   };
 
   return (
@@ -26,25 +26,25 @@ export const MovieType= () => {
           '&.Mui-checked': {
             color: grey[50],
           },
-        }}/>} label="Any"  disableTypography={true}/>
+        }} />} label="Any" disableTypography={true} />
         <FormControlLabel value="movie" control={<Radio sx={{
           color: grey[50],
           '&.Mui-checked': {
             color: grey[50],
           },
-        }}/>} label="Movie" disableTypography={true}/>
+        }} />} label="Movie" disableTypography={true} />
         <FormControlLabel value="series" control={<Radio sx={{
           color: grey[50],
           '&.Mui-checked': {
             color: grey[50],
           },
-        }}/>} label="Series" disableTypography={true}/>
+        }} />} label="Series" disableTypography={true} />
         <FormControlLabel value="episode" control={<Radio sx={{
           color: grey[50],
           '&.Mui-checked': {
             color: grey[50],
           },
-        }}/>} label="Episodes" disableTypography={true}/> 
+        }} />} label="Episodes" disableTypography={true} />
       </RadioGroup>
     </FormControl>
   );
