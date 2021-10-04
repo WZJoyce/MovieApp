@@ -1,4 +1,5 @@
 # MovieApp
+A movie/series search using the OMDB API
 
 ## Getting started
 
