@@ -41,7 +41,6 @@ export const MovieContextProvider = ({ children }) => {
         .get(`${config.baseUrl}?apikey=${config.apiKey}&s=${searchName}&type=${searchType}&page=1`)
         .then(
           res => {
-            console.log("try2")
             setSearchResult({ search: (res.data?.Search || []), total: (res.data?.totalResults || "") });
             setCurrentPage({ name: searchName, type: searchType, page: 1 })
             setLoadingList(false);
